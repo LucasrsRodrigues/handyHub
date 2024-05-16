@@ -24,6 +24,7 @@ export default interface IRNTextProps {
   variant?: "large" | "medium" | "small" | "xsmall";
   color?: string;
   weight?: "regular" | "medium" | "semibold" | "bold";
+  textAlign?: "start" | "end" | "left" | "right" | "center" | "justify" | "match-parent";
 }
 
 export const TextContainer = styled.Text<IRNTextProps>`
@@ -32,4 +33,5 @@ export const TextContainer = styled.Text<IRNTextProps>`
   color: ${({ color }) => color};
 
   font-family: ${({ theme, weight }) => theme.fonts[weight!]};
+  text-align: ${({ textAlign }) => textAlign};
 `;

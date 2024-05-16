@@ -6,6 +6,7 @@ import { Text } from '@components/base/Typography/Text';
 import { ThemeProvider } from 'styled-components/native';
 import defaultStyle from '@global/styles/default.style';
 import { SplashScreen } from '@screens/SplashScreen';
+import { Onboarding } from '@screens/Onboarding';
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -21,22 +22,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={defaultStyle}>
-      <View style={styles.container}>
-        <StatusBar style="auto" />
+      <StatusBar style="auto" />
 
-        <SplashScreen />
+      <Onboarding />
 
-      </View>
     </ThemeProvider>
 
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

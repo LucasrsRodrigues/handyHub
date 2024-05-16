@@ -10,8 +10,9 @@ interface ITextProps extends TextProps, IRNTextProps {
 export function Text({
   children,
   variant = "medium",
-  color = "#000000",
+  color = "#040404",
   weight = "medium",
+  textAlign = 'left',
   ...rest
 }: ITextProps) {
   return (
@@ -19,6 +20,7 @@ export function Text({
       variant={variant}
       color={color}
       weight={weight}
+      textAlign={textAlign}
       {...rest}
     >
       {children}

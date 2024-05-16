@@ -10,8 +10,9 @@ interface IHeadingProps extends TextProps, IRNTextProps {
 export function Heading({
   children,
   variant = "heading1",
-  color = "#000000",
+  color = "#040404",
   weight = "medium",
+  textAlign = "left",
   ...rest
 }: IHeadingProps) {
   return (
@@ -19,6 +20,7 @@ export function Heading({
       variant={variant}
       color={color}
       weight={weight}
+      textAlign={textAlign}
       {...rest}
     >
       {children}
