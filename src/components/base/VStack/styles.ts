@@ -10,17 +10,18 @@ export default interface VStackProps {
 export const Container = styled.View<VStackProps>`
   flex-direction: column;
 
-  justify-content: ${({ justifyContent }) => justifyContent || 'flex-start'};
+  justify-content: ${({ justifyContent }) => justifyContent};
 
-  align-items: ${({ alignItems }) => alignItems || 'stretch'};
+  align-items: ${({ alignItems }) => alignItems};
 
-  ${({ spacing }) => spacing && `margin-bottom: ${spacing}px;`}
+  /* ${({ spacing }) => spacing && `margin-bottom: ${spacing}px;`}; */
+  gap: ${({ spacing }) => spacing}px;
 
-  > * {
+  /* > * {
     margin-bottom: ${({ spacing }) => spacing || 0}px;
   }
 
   > *:last-child {
     margin-bottom: 0;
-  }
+  } */
 `;

@@ -1,19 +1,19 @@
 import React, { ReactNode } from 'react';
 
-import VStackProps, * as S from './styles';
+import HStackProps, * as S from './styles';
 
-interface IVStackProps extends VStackProps {
+interface IHStackProps extends HStackProps {
   children: ReactNode;
   [key: string]: any;
 }
 
-export function VStack({
+export function HStack({
   children,
-  alignItems = "stretch",
+  alignItems = "flex-start",
   justifyContent = "flex-start",
   spacing = 0,
   ...rest
-}: IVStackProps) {
+}: IHStackProps) {
   return (
     <S.Container
       alignItems={alignItems}
