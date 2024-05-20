@@ -1,27 +1,17 @@
 import styled from "styled-components/native";
+import { border, color, flexbox, layout, position, space } from "styled-system";
+import { IVStackProps } from "./vstack";
 
-export default interface VStackProps {
-  alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
-  justifyContent?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
-  spacing?: number;
-}
-
-
-export const Container = styled.View<VStackProps>`
+export const Container = styled.View<IVStackProps>`
   flex-direction: column;
 
-  justify-content: ${({ justifyContent }) => justifyContent};
+  ${color}
+  ${space}
+  ${layout}
+  ${flexbox}
+  ${border}
+  ${position}
 
-  align-items: ${({ alignItems }) => alignItems};
-
-  /* ${({ spacing }) => spacing && `margin-bottom: ${spacing}px;`}; */
   gap: ${({ spacing }) => spacing}px;
 
-  /* > * {
-    margin-bottom: ${({ spacing }) => spacing || 0}px;
-  }
-
-  > *:last-child {
-    margin-bottom: 0;
-  } */
 `;

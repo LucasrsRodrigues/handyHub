@@ -5,6 +5,12 @@
     "version": "1.0.0",
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "android": {
+      "package": "com.lucasrs.HandyHub"
+    },
+    "ios": {
+      "bundleIdentifier": "com.lucasrs.HandyHub"
+    }
   }
 }

@@ -1,4 +1,4 @@
-package com.handyhub
+package com.lucasrs.HandyHub
 
 import android.app.Application
 import android.content.res.Configuration

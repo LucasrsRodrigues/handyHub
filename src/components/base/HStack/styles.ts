@@ -1,26 +1,10 @@
 import styled from "styled-components/native";
-
-export default interface HStackProps {
-  alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
-  justifyContent?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
-  spacing?: number;
-}
+import { border, color, flexbox, layout, position, space } from "styled-system";
+import IHStackProps from "./hstack";
 
 
-export const Container = styled.View<HStackProps>`
+export const Container = styled.View<IHStackProps>`
   flex-direction: row;
-
-  justify-content: ${({ justifyContent }) => justifyContent || 'flex-start'};
-
-  align-items: ${({ alignItems }) => alignItems || 'center'};
-
-  ${({ spacing }) => spacing && `margin-right: ${spacing}px;`}
-
-  > * {
-    margin-right: ${({ spacing }) => spacing || 0}px;
-  }
   
-  > *:last-child {
-    margin-right: 0;
-  }
+  gap: ${({ spacing }) => spacing}px;
 `;

@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components/native";
 import { DefaultTheme } from "styled-components/native/dist/types";
+import IRNTextProps from "./text";
+import { color, layout, space, typography } from "styled-system";
 
 const variants = (theme: DefaultTheme, variants = 'medium') => ({
   "large": css`
@@ -20,18 +22,13 @@ const variants = (theme: DefaultTheme, variants = 'medium') => ({
   `,
 }[variants]);
 
-export default interface IRNTextProps {
-  variant?: "large" | "medium" | "small" | "xsmall";
-  color?: string;
-  weight?: "regular" | "medium" | "semibold" | "bold";
-  textAlign?: "start" | "end" | "left" | "right" | "center" | "justify" | "match-parent";
-}
-
 export const TextContainer = styled.Text<IRNTextProps>`
+  ${color};
+  ${space};
+  ${typography};
+  ${layout};
+
   ${({ theme, variant }) => variants(theme, variant)};
-
-  color: ${({ color }) => color};
-
   font-family: ${({ theme, weight }) => theme.fonts[weight!]};
   text-align: ${({ textAlign }) => textAlign};
 `;

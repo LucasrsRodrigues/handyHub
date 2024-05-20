@@ -1,24 +1,11 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+import * as S from "./styles";
 
-import VStackProps, * as S from './styles';
+import { IVStackProps } from './vstack';
 
-interface IVStackProps extends VStackProps {
-  children: ReactNode;
-  [key: string]: any;
-}
-
-export function VStack({
-  children,
-  alignItems = "stretch",
-  justifyContent = "flex-start",
-  spacing = 0,
-  ...rest
-}: IVStackProps) {
+export function VStack({ children, ...rest }: IVStackProps) {
   return (
     <S.Container
-      alignItems={alignItems}
-      justifyContent={justifyContent}
-      spacing={spacing}
       {...rest}
     >
       {children}

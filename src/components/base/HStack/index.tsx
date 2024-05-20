@@ -1,24 +1,12 @@
 import React, { ReactNode } from 'react';
 
-import HStackProps, * as S from './styles';
+import * as S from './styles';
+import IHStackProps from './hstack';
 
-interface IHStackProps extends HStackProps {
-  children: ReactNode;
-  [key: string]: any;
-}
 
-export function HStack({
-  children,
-  alignItems = "flex-start",
-  justifyContent = "flex-start",
-  spacing = 0,
-  ...rest
-}: IHStackProps) {
+export function HStack({ children, ...rest }: IHStackProps) {
   return (
     <S.Container
-      alignItems={alignItems}
-      justifyContent={justifyContent}
-      spacing={spacing}
       {...rest}
     >
       {children}

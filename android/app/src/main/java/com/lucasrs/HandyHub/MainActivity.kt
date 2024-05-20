@@ -1,4 +1,4 @@
-package com.handyhub
+package com.lucasrs.HandyHub
 
 import android.os.Build
 import android.os.Bundle

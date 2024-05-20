@@ -1,18 +1,14 @@
 import React from 'react';
-import { TextProps } from 'react-native'; "react-native";
 
-import IRNTextProps, * as S from './styles';
+import ITextProps from './text';
 
-interface ITextProps extends TextProps, IRNTextProps {
-  children: string | Array<string>;
-}
+import * as S from './styles';
 
 export function Text({
   children,
   variant = "medium",
   color = "#040404",
   weight = "medium",
-  textAlign = 'left',
   ...rest
 }: ITextProps) {
   return (
@@ -20,7 +16,6 @@ export function Text({
       variant={variant}
       color={color}
       weight={weight}
-      textAlign={textAlign}
       {...rest}
     >
       {children}
