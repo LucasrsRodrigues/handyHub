@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { ThemeProvider } from 'styled-components/native';
 import defaultStyle from '@global/styles/default.style';
 import { SignIn } from '@screens/SignIn';
+import { VerificationCode } from '@screens/VerificationCode';
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -22,7 +23,8 @@ export default function App() {
       <StatusBar style="auto" />
 
       {/* <Onboarding /> */}
-      <SignIn />
+      {/* <SignIn /> */}
+      <VerificationCode />
 
     </ThemeProvider>
 

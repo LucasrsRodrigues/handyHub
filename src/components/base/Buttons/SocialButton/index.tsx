@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
 
-import { Text } from '@components/base';
+import { Text } from '@components/base/Typography/Text';
 
 import GoogleIcon from "@assets/icons/social/google.svg";
 import FacebookIcon from "@assets/icons/social/facebook.svg";

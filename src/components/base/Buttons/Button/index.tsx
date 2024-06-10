@@ -3,7 +3,7 @@ import { TouchableOpacityProps } from 'react-native';
 
 import { useTheme } from 'styled-components/native';
 
-import { Text } from '@components/base';
+import { Text } from '@components/base/Typography/Text';
 
 import IRNButtonProps, * as S from './styles';
 
