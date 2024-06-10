@@ -3,6 +3,7 @@ export * from "./Typography/Text";
 
 export * from "./Inputs/CountryInput";
 export * from "./Inputs/Checkbox";
+export * from "./Inputs/Input";
 
 export * from "./HStack";
 export * from "./VStack";

@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components/native';
 import defaultStyle from '@global/styles/default.style';
 import { SignIn } from '@screens/SignIn';
 import { VerificationCode } from '@screens/VerificationCode';
+import { SignUp } from '@screens/SignUp';
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -24,7 +25,8 @@ export default function App() {
 
       {/* <Onboarding /> */}
       {/* <SignIn /> */}
-      <VerificationCode />
+      {/* <VerificationCode /> */}
+      <SignUp />
 
     </ThemeProvider>
 

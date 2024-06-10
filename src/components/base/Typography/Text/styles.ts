@@ -2,23 +2,24 @@ import styled, { css } from "styled-components/native";
 import { DefaultTheme } from "styled-components/native/dist/types";
 import IRNTextProps from "./text";
 import { color, layout, space, typography } from "styled-system";
+import responsiveFontSize from "@utils/responsiveFontSize";
 
 const variants = (theme: DefaultTheme, variants = 'medium') => ({
   "large": css`
-    font-size: 16px;
-    line-height: 22.4px;
+    font-size: ${responsiveFontSize(16)}px;
+    line-height: ${responsiveFontSize(22.4)}px;
   `,
   "medium": css`
-    font-size: 14px;
-    line-height: 19.6px;
+    font-size: ${responsiveFontSize(14)}px;
+    line-height: ${responsiveFontSize(19.6)}px;
   `,
   "small": css`
-    font-size: 12px;
-    line-height: 18px;
+    font-size: ${responsiveFontSize(12)}px;
+    line-height: ${responsiveFontSize(18)}px;
   `,
   "xsmall": css`
-    font-size: 8px;
-    line-height: 12px;
+    font-size: ${responsiveFontSize(8)}px;
+    line-height: ${responsiveFontSize(12)}px;
   `,
 }[variants]);
 

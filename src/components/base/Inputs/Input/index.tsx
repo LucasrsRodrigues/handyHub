@@ -23,7 +23,6 @@ export function Input({ label, leftElement, rightElement, ...rest }: IInputProps
         {leftElement && leftElement}
 
         <S.Input
-          placeholder="Phone number"
           {...rest}
         />
 
