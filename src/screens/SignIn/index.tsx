@@ -14,7 +14,6 @@ import { useTheme } from 'styled-components/native';
 import * as S from './styles';
 import { Box, SocialButton } from '@components/base';
 
-// {"height": 926, "width": 428}
 
 
 export function SignIn() {

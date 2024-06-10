@@ -75,10 +75,14 @@ export function VerificationCode() {
         </Box>
       </HStack>
 
-      <Button
-        label='Continue'
-        tintColor='#ffffff'
-      />
+      <Box marginTop={50} width="100%">
+
+        <Button
+          label='Continue'
+          tintColor='#ffffff'
+        />
+      </Box>
+
 
     </S.Container>
   );
