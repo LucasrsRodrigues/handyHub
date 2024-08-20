@@ -7,6 +7,7 @@ import { SignIn } from '@screens/SignIn';
 import { VerificationCode } from '@screens/VerificationCode';
 import { SignUp } from '@screens/SignUp';
 import { Home } from '@screens/Home';
+import TabNavigation from '@routes/tab.routes';
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -28,7 +29,8 @@ export default function App() {
       {/* <SignIn /> */}
       {/* <VerificationCode /> */}
       {/* <SignUp /> */}
-      <Home />
+      {/* <Home /> */}
+      <TabNavigation />
 
     </ThemeProvider>
 

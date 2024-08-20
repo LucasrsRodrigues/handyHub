@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
 
-import TickIcon from "@assets/icons/outline/tick.svg";
+import TickIcon from "@assets/icons/outline/Tick.svg";
 
 
 import { widthPercentageToDP } from 'react-native-responsive-screen';

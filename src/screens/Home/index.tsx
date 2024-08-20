@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Box, Button, Heading, HStack, Input, Text, VStack } from '@components/base';
 
-import LocationIcon from "@assets/icons/outline/location.svg";
+import LocationIcon from "@assets/icons/bold/Location.svg";
 import SearchIcon from "@assets/icons/outline/search.svg";
-import MicrophoneIcon from "@assets/icons/outline/microphone.svg";
+import MicrophoneIcon from "@assets/icons/bold/Microphone 1.svg";
 
 import CleaningIcon from "@assets/services/Cleaning.svg";
 import PaintingIcon from "@assets/services/Painting.svg";
@@ -107,6 +107,7 @@ export function Home() {
         borderTopLeftRadius={30}
         borderTopRightRadius={30}
         flex={1}
+        paddingBottom={100}
       >
         {/* Message */}
         <VStack spacing={12}>
@@ -115,7 +116,7 @@ export function Home() {
           </Heading>
 
           <HStack spacing={8}>
-            <LocationIcon />
+            <LocationIcon fill={theme.colors.black} />
 
             <Text weight='regular' color={theme.colors.grey_50}>
               Straford ParkLexington, KY 40505
@@ -128,7 +129,7 @@ export function Home() {
           <Input
             placeholder='Search Service...'
             leftElement={<SearchIcon />}
-            rightElement={<MicrophoneIcon />}
+            rightElement={<MicrophoneIcon fill={theme.colors.black} />}
           />
         </Box>
 
@@ -177,7 +178,10 @@ export function Home() {
             />
           </HStack>
 
-          <HStack justifyContent="space-between" marginTop={20}>
+          <HStack
+            justifyContent="space-between"
+            marginTop={20}
+          >
             {servicesList.map(item => (
               <S.SelectButton
                 key={item.id}
