@@ -6,7 +6,7 @@ import { VStack, Text } from '@components/base';
 import * as S from './styles';
 
 interface IInputProps extends TextInputProps {
-  label: string;
+  label?: string;
   leftElement?: ReactNode;
   rightElement?: ReactNode;
 }
@@ -15,9 +15,11 @@ export function Input({ label, leftElement, rightElement, ...rest }: IInputProps
 
   return (
     <VStack spacing={10}>
-      <Text>
-        {label}
-      </Text>
+      {label && (
+        <Text>
+          {label}
+        </Text>
+      )}
 
       <S.WrapperInputIcon>
         {leftElement && leftElement}

@@ -10,6 +10,8 @@ export const WrapperInputIcon = styled.View`
   flex-direction: row;
 
   gap: 10px;
+
+  justify-content: space-between;
 `;
 
 export const Input = styled.TextInput.attrs(({ theme }) => ({
@@ -18,4 +20,7 @@ export const Input = styled.TextInput.attrs(({ theme }) => ({
   font-family: ${({ theme }) => theme.fonts.regular};
   font-size: 12px;
   color: ${({ theme }) => theme.colors.grey_10};
+
+
+  flex: 1;
 `;
