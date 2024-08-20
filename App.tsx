@@ -6,6 +6,7 @@ import defaultStyle from '@global/styles/default.style';
 import { SignIn } from '@screens/SignIn';
 import { VerificationCode } from '@screens/VerificationCode';
 import { SignUp } from '@screens/SignUp';
+import { Home } from '@screens/Home';
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -26,7 +27,8 @@ export default function App() {
       {/* <Onboarding /> */}
       {/* <SignIn /> */}
       {/* <VerificationCode /> */}
-      <SignUp />
+      {/* <SignUp /> */}
+      <Home />
 
     </ThemeProvider>
 

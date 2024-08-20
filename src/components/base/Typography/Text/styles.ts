@@ -32,4 +32,5 @@ export const TextContainer = styled.Text<IRNTextProps>`
   ${({ theme, variant }) => variants(theme, variant)};
   font-family: ${({ theme, weight }) => theme.fonts[weight!]};
   text-align: ${({ textAlign }) => textAlign};
+  text-transform: ${({ textTransform }) => textTransform};
 `;

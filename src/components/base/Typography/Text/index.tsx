@@ -9,6 +9,7 @@ export function Text({
   variant = "medium",
   color = "#040404",
   weight = "medium",
+  textTransform = "none",
   ...rest
 }: ITextProps) {
   return (
@@ -16,6 +17,7 @@ export function Text({
       variant={variant}
       color={color}
       weight={weight}
+      textTransform={textTransform}
       {...rest}
     >
       {children}
