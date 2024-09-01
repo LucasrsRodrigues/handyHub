@@ -28,8 +28,6 @@ import { Home } from "@screens/Home";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
-const { height, width } = Dimensions.get("screen");
-
 const optionsMenu = [
   {
     id: "0",
@@ -73,74 +71,72 @@ const optionsMenu = [
 
 export default function TabNavigation() {
   return (
-    <NavigationContainer>
-      <Navigator
-        screenOptions={{
-          headerShown: false,
-          tabBarShowLabel: false,
-          tabBarStyle: {
-            position: "absolute",
-            bottom: 20,
-            marginHorizontal: 15,
-            backgroundColor: "#040404",
-            borderRadius: 40,
-            height: 56,
-            overflow: "hidden"
-          }
-        }}
-      >
-        {optionsMenu.map(item => (
-          <Screen
-            key={item.id}
-            name={item.name}
-            component={item.component}
-            options={{
-              tabBarIcon: ({ focused, color }) => (
-                <View
-                  style={{
-                    position: "absolute",
-                    top: "50%"
-                  }}
-                >
-                  {focused ? (
-                    <item.icon_bold
-                      width={24}
-                      height={24}
-                      fill="#ffffff"
-                    />
-                  ) : (
-                    <item.icon_outline
-                      width={24}
-                      height={24}
-                      fill="#ffffff"
-                    />
-                  )}
+    <Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          position: "absolute",
+          bottom: 20,
+          marginHorizontal: 15,
+          backgroundColor: "#040404",
+          borderRadius: 40,
+          height: 56,
+          overflow: "hidden"
+        }
+      }}
+    >
+      {optionsMenu.map(item => (
+        <Screen
+          key={item.id}
+          name={item.name}
+          component={item.component}
+          options={{
+            tabBarIcon: ({ focused, color }) => (
+              <View
+                style={{
+                  position: "absolute",
+                  top: "50%"
+                }}
+              >
+                {focused ? (
+                  <item.icon_bold
+                    width={24}
+                    height={24}
+                    fill="#ffffff"
+                  />
+                ) : (
+                  <item.icon_outline
+                    width={24}
+                    height={24}
+                    fill="#ffffff"
+                  />
+                )}
 
-                  {focused ? (
+                {focused ? (
+                  <View
+                    style={{
+                      position: "absolute",
+                      alignSelf: "center",
+                      bottom: "-90%"
+                    }}
+                  >
                     <View
                       style={{
-                        position: "absolute",
-                        alignSelf: "center",
-                        bottom: "-90%"
+                        width: 8,
+                        height: 8,
+                        borderRadius: 4,
+                        backgroundColor: "#B0E0E6",
                       }}
-                    >
-                      <View
-                        style={{
-                          width: 8,
-                          height: 8,
-                          borderRadius: 4,
-                          backgroundColor: "#B0E0E6",
-                        }}
-                      />
-                    </View>
-                  ) : null}
-                </View>
-              )
-            }}
-          />
-        ))}
+                    />
+                  </View>
+                ) : null}
+              </View>
+            )
+          }}
+        />
+      ))}
 
-      </Navigator>
-    </NavigationContainer >
+    </Navigator>
   )
 }

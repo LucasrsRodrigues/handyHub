@@ -5,6 +5,7 @@ import { Heading, Text } from '@components/base';
 import { useTheme } from 'styled-components/native';
 import { VStack } from '@components/base/VStack';
 import { ImageBackground } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const steps = [
   {
@@ -28,9 +29,21 @@ const steps = [
 ]
 
 export function Onboarding() {
+  const { navigate } = useNavigation();
   const [activeStep, setActiveStep] = useState(0);
 
   const theme = useTheme();
+
+  function changeStep() {
+    console.log({ activeStep, tamanho: steps.length });
+
+    if (activeStep === steps.length - 1) {
+      navigate("SignIn");
+
+      return;
+    }
+    setActiveStep(prev => prev + 1)
+  }
 
   return (
     <S.Container background={steps[activeStep].background}>
@@ -48,7 +61,7 @@ export function Onboarding() {
             {steps[activeStep].text}
           </Text>
 
-          <S.Button onPress={() => setActiveStep(prev => prev + 1)}>
+          <S.Button onPress={changeStep}>
             <Text
               variant='large'
               weight='medium'

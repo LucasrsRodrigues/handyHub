@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { useFonts, Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
 import { StatusBar } from 'expo-status-bar';
@@ -8,6 +9,8 @@ import { VerificationCode } from '@screens/VerificationCode';
 import { SignUp } from '@screens/SignUp';
 import { Home } from '@screens/Home';
 import TabNavigation from '@routes/tab.routes';
+import { Routes } from '@routes/index';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -22,17 +25,14 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={defaultStyle}>
-      <StatusBar style="auto" />
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemeProvider theme={defaultStyle}>
+        <StatusBar style="auto" />
 
-      {/* <Onboarding /> */}
-      {/* <SignIn /> */}
-      {/* <VerificationCode /> */}
-      {/* <SignUp /> */}
-      {/* <Home /> */}
-      <TabNavigation />
+        <Routes />
+      </ThemeProvider>
+    </GestureHandlerRootView>
 
-    </ThemeProvider>
 
   );
 }
