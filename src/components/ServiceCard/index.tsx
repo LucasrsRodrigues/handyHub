@@ -3,6 +3,8 @@ import React from 'react';
 import { VStack, HStack, Box, Text } from '@components/base';
 import { widthPercentageToDP } from 'react-native-responsive-screen';
 import { useTheme } from 'styled-components/native';
+import StarIcon from "@assets/icons/bold/Star.svg";
+
 import * as S from './styles';
 
 export function ServiceCard() {
@@ -35,19 +37,26 @@ export function ServiceCard() {
         </Text>
 
         <HStack justifyContent="space-between">
-          <Box
+          <HStack
             bg="#ffffff"
             paddingX="10px"
             paddingY="5px"
             borderRadius={30}
+            spacing={4}
           >
+            <StarIcon
+              fill={theme.colors.warning}
+              width={9.5}
+              height={9.5}
+            />
+
             <Text
               variant='xsmall'
               weight='regular'
             >
               4.8 (87)
             </Text>
-          </Box>
+          </HStack>
 
           <Box
             bg={theme.colors.main}
