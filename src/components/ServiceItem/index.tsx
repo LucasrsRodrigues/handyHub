@@ -19,7 +19,7 @@ export function ServiceItem({ label, icon: Icon, ...rest }: IServiceItemProps) {
         <Icon />
       </S.ItemButton>
 
-      <Text variant='small'>
+      <Text variant='small' textAlign="center">
         {label}
       </Text>
 

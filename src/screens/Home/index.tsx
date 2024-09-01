@@ -188,7 +188,9 @@ export function Home() {
                 onPress={() => setSelectedPopularService(item.label)}
               >
                 <VStack spacing={3}>
-                  <Text>{item.label}</Text>
+                  <Text textAlign="center">
+                    {item.label}
+                  </Text>
                   {item.label === selectedPopularService && (
                     <S.ButtonDivider />
                   )}
