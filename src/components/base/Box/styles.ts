@@ -1,17 +1,17 @@
 import styled from "styled-components/native";
-import { IBoxProps } from "./box";
+import type { IBoxProps } from "./box";
 
 import {
-  color,
-  space,
-  layout,
-  border,
-  flexbox,
-  position,
-  shadow,
-} from 'styled-system';
+	color,
+	space,
+	layout,
+	border,
+	flexbox,
+	position,
+	shadow,
+} from "styled-system";
 
-export const Container = styled.View<IBoxProps>`
+export const Container = styled.TouchableOpacity<IBoxProps>`
   ${color};
   ${space};
   ${layout};

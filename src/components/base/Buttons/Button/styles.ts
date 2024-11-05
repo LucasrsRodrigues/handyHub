@@ -44,7 +44,8 @@ export default interface IRNButtonProps {
 }
 
 export const Button = styled.TouchableOpacity<IRNButtonProps>`
-  width: 100%;
+  /* width: 100%; */
+  flex: 1;
   align-items: center;
   justify-content: center;
 
