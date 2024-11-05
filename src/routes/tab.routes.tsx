@@ -1,7 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from '@react-navigation/native';
-import { Dimensions, View } from "react-native";
+import { View } from "react-native";
 
 import HomeIconOutline from "@assets/icons/outline/Home 2.svg";
 import HomeIconBold from "@assets/icons/bold/Home 2.svg";
@@ -42,6 +41,7 @@ const optionsMenu = [
     component: Orders,
     icon_outline: DocumentIconOutline,
     icon_bold: DocumentIconBold,
+    isHidden: false,
   },
   {
     id: "2",
@@ -67,9 +67,8 @@ const optionsMenu = [
   },
 ]
 
-
-
 export default function TabNavigation() {
+
   return (
     <Navigator
       screenOptions={{
@@ -82,9 +81,10 @@ export default function TabNavigation() {
           backgroundColor: "#040404",
           borderRadius: 40,
           height: 56,
-          overflow: "hidden"
+          overflow: "hidden",
         }
       }}
+
     >
       {optionsMenu.map(item => (
         <Screen
@@ -132,7 +132,7 @@ export default function TabNavigation() {
                   </View>
                 ) : null}
               </View>
-            )
+            ),
           }}
         />
       ))}

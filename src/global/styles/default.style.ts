@@ -7,6 +7,7 @@ export default {
     error: "#F11515",
     warning: "#FAD12C",
     success: "#129E10",
+    orange: "#FF8A00",
     grey_10: "#1D1D1D",
     grey_20: "#484A4D",
     grey_30: "#5F6164",
